@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "../../Style/signup_form.css";
 import arrow from "../../Image/left-arrow.png";
 import { Button, Form, Input } from "antd";
+import { Link } from "react-router-dom";
 /*import { Link } from "react-router-dom";*/
 
 class Forgetpass_form extends Component {
@@ -58,8 +59,10 @@ class Forgetpass_form extends Component {
           <span id="confirm"></span>
         </Form.Item>
         <div className="footer">
+          <Link to="/Login">
             <img src={arrow} alt="arrow" className="arrow" />
             Back to Login
+            </Link>
         </div>
       </Form>
     );

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "antd/dist/antd.css";
 import "../../Style/signup_form.css";
 import { Button, Form, Input } from "antd";
-/*import { Link } from "react-router-dom";*/
+import { Link } from "react-router-dom";
 
 class LoginForm extends Component {
   state = {
@@ -59,8 +59,9 @@ class LoginForm extends Component {
           ]}
         >
           <Input.Password id="password" onChange={this.handleChange} />
-          <span className="footer">
+          <span className="footer"><Link to="/Forgetpassword">
           Forgot Password?
+          </Link>
         </span>
         </Form.Item>
         
@@ -71,7 +72,7 @@ class LoginForm extends Component {
           </Button>
         </Form.Item>
         <div className="footer">
-          Don’t have an Account? Sign Up
+          Don’t have an Account? <Link to="/">Sign Up</Link>
         </div>
       </Form>
     );

@@ -178,7 +178,7 @@ class Signup extends Component {
           </Button>
         </Form.Item>
         <div className="footer">
-          Already have an Account? Login
+          Already have an Account? <Link to="/Login">Login</Link>
         </div>
       </Form>
     );
