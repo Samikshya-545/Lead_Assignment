@@ -3,14 +3,22 @@ import "antd/dist/antd.css";
 import "../../Style/signup_form.css";
 import { Button, Form, Input } from "antd";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 class LoginForm extends Component {
   state = {
     email: "",
     password: "",
   };
+  host = process.env.host;
   handleSubmit = (values) => {
-    console.log(this.state);
+    var body = {
+      EmailAddress: this.state.email,
+      Password: this.state.password
+    };
+    console.log({process.env.REACT_APP_Backend_host});
+    // axios.post('https://'+this.host+'/api/Authentication/Signin?', body)
+    //     .then(response => setArticleId(response.data.id));
   };
   handleChange = (values) => {
     this.setState({
@@ -52,17 +60,18 @@ class LoginForm extends Component {
           labelCol={{ span: 24 }}
           wrapperCol={{ span: 24 }}
           rules={[
-            {
-              required: true,
-              message: "Please input your password!",
-            },
+            // {
+            //   required: true,
+            //   message: "Please input your password!",
+            // },
           ]}
         >
           <Input.Password id="password" onChange={this.handleChange} />
-          <span className="footer"><Link to="/Forgetpassword">
-          Forgot Password?
-          </Link>
-        </span>
+          <span className="footer">
+            <Link to="/Forgetpassword">
+              Forgot Password?
+            </Link>
+          </span>
         </Form.Item>
         
 
