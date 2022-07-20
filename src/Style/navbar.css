@@ -1,0 +1,37 @@
+.navbar {
+    width: 100%;
+    background: #082032 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.nav_con {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.lsq_logo{
+    margin-left: 7rem;
+}
+
+/*  Media for mobile */
+
+@media screen and (min-width: 720px) {
+    .nav_cont {
+      margin-left: 134px;
+      margin-right: 134px;
+    }
+  
+    .containerHero {
+      margin-left: 185px;
+      margin-right: 185px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .nav_cont {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
