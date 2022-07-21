@@ -1,9 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    "user": 'Anonymous',
-    "isClicked": false ,
-    "count": 0
+    "leadID": null,
+    "authKey": ''
 }
 
 export const AuthSlice = createSlice({
@@ -22,13 +21,16 @@ export const AuthSlice = createSlice({
         // incrementAction : (state, action) => {
         //     state.count += action.payload;
         // }
-        setUserAction : (state, action) => {
-            state.user = action.payload;
+        setLeadIDAction : (state, action) => {
+            state.leadID = action.payload;
+        },
+        setAuthKeyAction: (state, action) => {
+            state.authKey = action.payload
         }
     }
 })
 
-export const { setUserAction } = AuthSlice.actions;
+export const { setLeadIDAction, setAuthKeyAction } = AuthSlice.actions;
 
 export default AuthSlice.reducer;
 
